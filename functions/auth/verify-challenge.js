@@ -2,7 +2,6 @@ import {app} from '@azure/functions';
 import {authRepository} from '../../repositories/AuthRepository.js';
 import {initializeApp} from '../../services/serviceInit.js';
 import {resolveTenant, validateTenantAccess} from '../../services/serviceTenant.js';
-import {getSecret} from '../../services/serviceSecrets.js';
 import {p256} from '@noble/curves/p256';
 import {hexToBytes, utf8ToBytes} from '@noble/hashes/utils';
 import {sha256} from '@noble/hashes/sha256';
@@ -159,9 +158,6 @@ async function authVerifyChallengeHandler(request, context) {
 			};
 		}
 
-		// Get HMAC key for interest hashing
-		const hmacKey = await getSecret('HMAC_SECRET_KEY');
-
 		// Success
 		return {
 			status: 200,
@@ -173,7 +169,6 @@ async function authVerifyChallengeHandler(request, context) {
 					username: challengeData.username,
 					tenant: tenant.displayName,
 				},
-				'HMAC-SECRET-KEY': hmacKey,
 				message: 'Authentication successful',
 			},
 		};

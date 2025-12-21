@@ -23,6 +23,7 @@ import './functions/auth/check-user-exists.js';
 // User functions
 import './functions/user/update-interests.js';
 import './functions/user/get-matches.js';
+import './functions/user/get-nearby-users.js';
 import './functions/user/update-location.js';
 import './functions/user/get-nearby-activity.js';
 import './functions/user/get-widgets.js';
@@ -46,6 +47,9 @@ import './functions/realtime/send-message.js';
 import './functions/realtime/heartbeat.js';
 import './functions/realtime/on-socket-connected.js';
 import './functions/realtime/on-socket-disconnected.js';
+import './functions/realtime/route-psi-initiate.js';
+import './functions/realtime/route-psi-response.js';
+import './functions/realtime/route-psi-result.js';
 import './functions/realtime/on-ping-message.js';
 
 export {app};
