@@ -1,0 +1,69 @@
+# Node Modules
+node_modules/
+
+# Azurite Artifacts
+__azurite/
+
+# Extension Artifacts
+bin/
+obj/
+
+# dependencies
+node_modules/
+
+# Expo
+.expo/
+dist/
+web-build/
+expo-env.d.ts
+
+# Native
+.kotlin/
+*.orig.*
+*.jks
+*.p8
+*.p12
+*.key
+*.mobileprovision
+
+# Metro
+.metro-health-check*
+
+# debug
+npm-debug.*
+yarn-debug.*
+yarn-error.*
+yarn.lock
+*.lock
+
+
+# local env files
+.env
+.env*.local
+.env*
+
+#local.settings.json
+local.settings.json
+local.settings.dev.json
+local.settings.prod.json
+
+# typescript
+*.tsbuildinfo
+
+# VSCode
+
+*.code-workspace
+
+# Documentation
+.docs
+.docs/
+.docs/*.md
+
+#Azurite
+backend/.azurite
+
+#Android
+android
+
+# macOS
+.DS_Store

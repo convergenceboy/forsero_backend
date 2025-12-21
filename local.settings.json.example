@@ -1,0 +1,17 @@
+{
+  "IsEncrypted": false,
+  "Values": {
+    "FUNCTIONS_WORKER_RUNTIME": "node",
+    "AzureWebJobsFeatureFlags": "EnableWorkerIndexing",
+    "AzureWebJobsStorage": "UseDevelopmentStorage=true",
+    "JWT_SECRET": "dev-jwt-secret-change-me",
+    "HMAC_SECRET_KEY": "dev-hmac-secret-change-me",
+    "NODE_ENV": "development",
+    "AZURE_KEYVAULT_URL": "",
+    "WebPubSubForSocketIOConnectionString": "Endpoint=https://SOCKETIO-RESOURCE-NAME-webpubsub.azure.com;AccessKey=ACCESS-KEY-HERE;Version=1.0;",
+    "REDIS_CONNECTION_STRING": "redis://127.0.0.1:6379",
+    "DATABASE_URL": "postgresql://DATABASE-USER-NAME-HERE:DATABASE-PASSWORD-HERE@IP-ADDRESS-OR-localhost:5432/DATABASE-NAME-HERE"
+  },
+  "ConnectionStrings": {},
+  "Host": {}
+}
