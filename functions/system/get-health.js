@@ -25,7 +25,6 @@ async function systemGetHealthHandler(_request, context) {
 
 	// 2 & 3. Check and retrieve DATABASE-URL and HMAC key
 	const databaseUrl = await getSecret('DATABASE_URL');
-	const hmacKey = await getSecret('HMAC_SECRET_KEY');
 	const jwtSecret = await getSecret('JWT_SECRET');
 
 	// 4. Test database connectivity
@@ -65,11 +64,6 @@ async function systemGetHealthHandler(_request, context) {
 				retrieved: Boolean(databaseUrl),
 				value: databaseUrl ?? 'Not available',
 				source: databaseUrlSource,
-			},
-			hmacKey: {
-				retrieved: Boolean(hmacKey),
-				value: hmacKey ?? 'Not available',
-				name: 'HMAC-SECRET-KEY',
 			},
 			jwtSecret: {
 				retrieved: Boolean(jwtSecret),
